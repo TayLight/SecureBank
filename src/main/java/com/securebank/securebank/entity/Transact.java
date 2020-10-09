@@ -6,12 +6,15 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "jtransfer")
+@Table(name = "jtransaction")
 public class Transact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_transfer")
+    @Column(name = "id_transaction")
     private int idTransact;
-
-    private String payeer;
+    @Column(name = "payment_amount")
+    private double payment_amount;
+    @ManyToOne(fetch = FetchType.LAZY,cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JoinColumn(name = "payee")
+    private Client payee;
 }

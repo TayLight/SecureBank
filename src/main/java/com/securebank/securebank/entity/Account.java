@@ -16,7 +16,7 @@ public class Account {
     @Column(name = "account_number")
     private String accountNumber;
     @Column(name = "amount")
-    private int amount;
+    private double amount;
     @Column(name = "currency")
     private String currency;
     @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.MERGE,CascadeType.PERSIST})
