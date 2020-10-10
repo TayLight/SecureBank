@@ -35,7 +35,8 @@ public class BankController {
     @RequestMapping("/")
     public ModelAndView home(){
         ModelAndView modelAndView = new ModelAndView("index");
-        return modelAndView;
+        modelAndView.addObject(bankService.getAllDepartment().get(0));
+        return  modelAndView;
     }
 
     @PostMapping("transact")

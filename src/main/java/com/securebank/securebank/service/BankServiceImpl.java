@@ -41,7 +41,7 @@ public class BankServiceImpl implements BankService {
     public boolean setTransaction(Transact transact, Client sender, Employee employee) {
         boolean correct= false;
         transactionRepository.save(transact);
-        if(true){
+        if(true){       //Вот это условие, где будет лежать проверка
             Transfer transfer = new Transfer(transact.getPayee(), sender, transact, employee);
             transferRepository.save(transfer);
         }
