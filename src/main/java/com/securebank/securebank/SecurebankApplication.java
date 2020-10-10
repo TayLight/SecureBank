@@ -14,6 +14,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = "com.securebank.securebank")
 public class SecurebankApplication {
 
+
+
 	public static void main(String[] args) {
 		SpringApplication.run(SecurebankApplication.class, args);
 	}

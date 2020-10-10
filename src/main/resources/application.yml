@@ -7,3 +7,7 @@ spring:
     jpa:
       database: postgresql
       database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
