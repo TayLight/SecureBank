@@ -1,5 +1,8 @@
 package com.securebank.securebank.controller;
 
+import com.securebank.securebank.entity.Client;
+import com.securebank.securebank.entity.Employee;
+import com.securebank.securebank.entity.Result;
 import com.securebank.securebank.entity.Transact;
 import com.securebank.securebank.service.BankServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +27,11 @@ public class BankController {
         LinkedList<Transact> transacts =  new LinkedList<Transact>();
         transacts.add(new Transact());
         return transacts;
+    }
+
+    @PostMapping("transact")
+    public Result transact(@RequestBody Transact transact, @RequestBody Client sender, @RequestBody Employee employee){
+        if(bankService.setTransaction(transact,sender,employee)) return new Result(true, "Успешно!");
+        return new Result(false, "Отклонено!");
     }
 }

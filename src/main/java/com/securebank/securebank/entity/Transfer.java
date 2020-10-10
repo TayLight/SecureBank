@@ -25,4 +25,11 @@ public class Transfer {
     @ManyToOne(fetch = FetchType.LAZY,cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(name = "id_employee")
     private Employee employee;
+
+    public Transfer(Client payee, Client sender, Transact transact, Employee employee){
+        this.transact = transact;
+        this.employee=employee;
+        this.sender=sender;
+        this.payee=payee;
+    }
 }
