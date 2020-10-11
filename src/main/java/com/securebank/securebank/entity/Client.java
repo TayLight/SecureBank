@@ -1,5 +1,6 @@
 package com.securebank.securebank.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -25,4 +26,7 @@ public class Client {
     private String telephoneClient;
     @Column(name = "gender")
     private String gender;
+
+    @JsonIgnore
+    private double countConf;
 }

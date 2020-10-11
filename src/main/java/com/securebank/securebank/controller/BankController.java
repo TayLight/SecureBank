@@ -10,9 +10,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.LinkedList;
-import java.util.List;
-
 @RestController
 @RequestMapping()
 @Validated
@@ -23,13 +20,6 @@ public class BankController {
     @Autowired
     public BankController(BankServiceImpl bankService) {
         this.bankService = bankService;
-    }
-
-    @GetMapping("all")
-    public List<Transact> getAll(){
-        LinkedList<Transact> transacts =  new LinkedList<Transact>();
-        transacts.add(new Transact());
-        return transacts;
     }
 
     @RequestMapping("/")

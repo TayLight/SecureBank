@@ -331,6 +331,36 @@ label {
   margin-top: -8px;
 }
 
+.btn-transfer {
+  float: left;
+  padding-top: 8px;
+  width: 100%;
+  height: 35px;
+	border: none;
+	border-radius: 20px;
+  margin-top: -8px;
+}
+
+.btn-transfer-alert {
+  float: left;
+  padding-top: 8px;
+  width: 100%;
+  height: 35px;
+	border: none;
+	border-radius: 20px;
+  margin-top: -8px;
+}
+
+.btn-back {
+  float: left;
+  padding-top: 8px;
+  width: 100%;
+  height: 35px;
+	border: none;
+	border-radius: 20px;
+  margin-top: -8px;
+}
+
 .btn-animate {
   float: left;
   font-weight: 700;
@@ -360,7 +390,26 @@ label {
   background-color: rgba(255,255,255,1);
 }
 
-a.btn-signup:hover, a.btn-signin:hover {
+.btn-animate-back {
+  float: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(255,255,255, 1);
+  padding-top: 8px;
+  width: 100%;
+  height: 35px;
+	border: none;
+	border-radius: 20px;
+  margin-top: 23px;
+  background-color: rgba(16,89,255, 1);
+  left: 0px;
+  top: 0px;
+  transition: all .5s ease, top .5s ease .5s, height .5s ease .5s, background-color .5s ease .75s; 
+}
+
+a.btn-signup:hover, a.btn-signin:hover, a.btn-transfer:hover, a.btn-back:hover {
     cursor: pointer; 
     background-color: #0F4FE6;
     transition: background-color .5s; 
@@ -400,7 +449,28 @@ a.btn-signup:hover, a.btn-signin:hover {
 }
 
 .welcome-left {
-  transform: translateY(-760px);
+  transform: translateY(-770px);
+  opacity: 1; 
+}
+
+.welcome-left-transfer {
+  transform: translateY(-873px);
+  opacity: 1; 
+}
+
+.alert {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  color: rgba(35,43,85,0.75);
+  opacity: 0;
+  transition: opacity .1s ease 1s;
+  transition: transform 1.5s ease .25s, opacity .1s ease 1s;
+  transition: transform 1.5s ease .25s, opacity .1s ease 1s;
+}
+
+.alert-left-transfer {
+  transform: translateY(-873px);
   opacity: 1; 
 }
 
@@ -443,6 +513,26 @@ a.btn-signup:hover, a.btn-signin:hover {
   opacity: 1;
 }
 
+.profile-photo-transfer {
+  height: 125px;
+  width: 125px;
+  position: relative;
+  border-radius: 70px;
+  left: 155px;
+  top: -1000px;
+  background: url(money.png);
+  background-size: 100% 100%;
+  background-position: 100% 100%;
+  opacity: 0;
+  transition: top 1.5s ease 0.35s, opacity .75s ease .5s;
+  border: solid 3px #ffffff;
+}
+
+.profile-photo-down-transfer {
+  top: -636px;
+  opacity: 1;
+}
+
 h1 {
   color: #ffffff;
   font-size: 35px;
@@ -472,8 +562,14 @@ h1 {
   transition: top 1.5s ease 0.35s, opacity .75s ease .5s;
 }
 
+
 .btn-goback-up {
   top: -1080px;
+  opacity: 1;
+}
+
+.btn-goback-up-transfer {
+  top: -801px;
   opacity: 1;
 }
 
